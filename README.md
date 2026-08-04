@@ -1,39 +1,13 @@
-# 대 달무티 로컬 실시간 웹게임
-
-## 준비물
-- Node.js 18 이상
-- 같은 Wi-Fi에 연결된 4~8개의 기기
-
-## Windows 실행
-1. 압축을 풉니다.
-2. `start.bat`을 더블클릭합니다.
-3. 검은 창에 표시된 `Other devices: http://192.168...:3000` 주소를 다른 기기에서 엽니다.
-
-오류가 나면 폴더 주소창에 `cmd`를 입력한 뒤:
-```
-node server.js
-```
-
-## macOS 실행
-터미널에서 폴더로 이동한 뒤:
-```
-./start.command
-```
-권한 오류가 나면:
-```
-chmod +x start.command
-./start.command
-```
-
-## 포함 규칙
-- 4~8인
-- 80장: 숫자 1은 1장, 2는 2장 ... 12는 12장, 광대 2장
-- 같은 장수의 더 높은 계급(더 작은 숫자)으로 덮기
-- 광대는 다른 숫자와 함께 조커, 광대만 내면 13
-- 자유 패스와 묶음 종료
-- 매 판 종료 순서에 따른 계급 재배치
-- 대/소 달무티와 대/소 농노 세금
-- 광대 2장의 혁명, 대 농노의 대혁명
-- 새로고침 후 자동 재접속
-
-공식 그림·로고는 포함하지 않은 비공식 개인용 구현입니다.
+{
+  "name": "great-dalmuti-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "4-8 player local realtime card game",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
